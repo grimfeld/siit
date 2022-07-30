@@ -20,7 +20,7 @@ const ServicesList = ({ className }: { className?: string }): JSX.Element => {
   return (
     <div className={['pb-16 border-b', className].join(' ')}>
       <Title className='mb-8'>List of services</Title>
-      <div className="grid grid-cols-8 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6 2xl:grid-cols-8">
         {data.map(service => (
           <ServiceCard key={service.id} {...service} handleClick={() => eventBus.dispatch('setFilter', { id: service.id, name: service.name })} />
         ))}

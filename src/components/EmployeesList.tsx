@@ -25,7 +25,7 @@ const EmployeesList = ({ className, filter }: { className?: string, filter?: Fil
         <Title>List of employees</Title>
         {filter && <Badge className='bg-violet-300' content={filter.name} handleClose={() => eventBus.dispatch("clearFilter")} />}
       </div>
-      <div className="grid grid-cols-8 gap-4">
+      <div className="grid grid-cols-2 gap-4 md:grid-cols-3 lg:grid-cols-6 2xl:grid-cols-8">
         {data.map(employee => (
           <EmployeeCard key={employee.id} {...employee} />
         ))}

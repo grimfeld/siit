@@ -30,7 +30,7 @@ const App = (): JSX.Element => {
   }, [])
 
   return (
-    <div className='max-w-[1440px] m-auto py-16'>
+    <div className='max-w-[1440px] 2xl:px-0 px-8 m-auto py-16'>
       <h1 className='mb-16 text-4xl font-black uppercase'>Siit</h1>
       <EmployeesList className='mb-16' filter={filter} />
       <ServicesList />
