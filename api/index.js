@@ -11,6 +11,7 @@ const PORT = 3001
 app.use(cors())
 
 app.get('/services.json', (req, res) => {
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate')
   res.json(services)
 })
 
@@ -25,10 +26,11 @@ app.get('/users.json', (req, res) => {
     filteredUsers = filteredUsers.filter((u) => u.service_ids.includes(parseInt(req.query.service_id)))
   }
 
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate')
   res.json(filteredUsers)
 })
 
-app.use(express.static("server/public"))
+app.use(express.static("api/public"))
 // app.use(bundler.middleware());
 
 app.listen(PORT, () => {
