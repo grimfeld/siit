@@ -46,3 +46,6 @@ app.listen(PORT, () => {
   console.log()
   console.log("You'll find more instruction in the README file.")
 })
+
+
+module.exports = app
