@@ -17,3 +17,8 @@ export type Service = {
     nb_users_included: number
   }
 }
+
+export type Filter = {
+  id: number
+  name: string
+}

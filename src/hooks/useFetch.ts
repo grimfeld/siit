@@ -1,4 +1,5 @@
 import { useEffect, useReducer, useRef } from "react"
+import { Filter } from "../types"
 
 interface State<T> {
   pending: boolean

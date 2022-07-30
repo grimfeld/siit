@@ -21,6 +21,7 @@ app.get('/users.json', (req, res) => {
   })
 
   if (req.query.service_id) {
+    console.log(req.query.service_id)
     filteredUsers = filteredUsers.filter((u) => u.service_ids.includes(parseInt(req.query.service_id)))
   }
 
