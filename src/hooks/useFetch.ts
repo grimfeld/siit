@@ -1,6 +1,4 @@
 import { useEffect, useReducer, useRef } from "react"
-import { Filter } from "../types"
-
 interface State<T> {
   pending: boolean
   data?: T
@@ -72,6 +70,7 @@ const useFetch = <T = unknown>(
     return () => {
       cancel.current = true
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url])
 
   return state

@@ -1,7 +1,6 @@
 import React from 'react'
 import useFetch from '../hooks/useFetch'
 import { Employee, Service } from '../types'
-import eventBus from '../utils/EventBus'
 
 interface ServiceCardProps extends Service {
   className?: string

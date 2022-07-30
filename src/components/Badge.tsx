@@ -1,6 +1,4 @@
 import React from 'react'
-import eventBus from '../utils/EventBus'
-
 interface BadgeProps {
   content: string
   className?: string
