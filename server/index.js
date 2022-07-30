@@ -1,11 +1,14 @@
 const express = require("express")
 const services = require("./services.json")
 const users = require("./users.json")
+const cors = require("cors")
 const app = express()
 // const Bundler = require("parcel-bundler");
 // const bundler = new Bundler("src/index.html", { logLevel: 2 });
 
 const PORT = 3001
+
+app.use(cors())
 
 app.get('/services.json', (req, res) => {
   res.json(services)
