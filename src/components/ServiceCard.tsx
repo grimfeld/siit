@@ -9,7 +9,7 @@ interface ServiceCardProps extends Service {
 
 const ServiceCard = ({ id, name, website_url, logo_url, price, className, handleClick }: ServiceCardProps): JSX.Element => {
 
-  const { pending, data, error } = useFetch<Employee[]>('http://localhost:3001/users.json?service_id=' + id, {
+  const { pending, data, error } = useFetch<Employee[]>('/users.json?service_id=' + id, {
     method: "GET"
   })
 
