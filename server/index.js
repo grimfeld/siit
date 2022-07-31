@@ -10,11 +10,11 @@ const PORT = 3001
 
 app.use(cors())
 
-app.get('/api/services.json', (req, res) => {
+app.get('/services.json', (req, res) => {
   res.json(services)
 })
 
-app.get('/api/users.json', (req, res) => {
+app.get('/users.json', (req, res) => {
   let filteredUsers = users.map((user, i) => {
     const id = i + 1
     return { id, avatar_url: `https://eu.ui-avatars.com/api/?name=${user.name}`, ...user }
