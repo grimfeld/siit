@@ -44,7 +44,7 @@ const useFetch = <T = unknown>(
     const fetchData = async () => {
       dispatch({ type: "loading" })
       try {
-        const response = await fetch(url, options)
+        const response = await fetch(process.env.REACT_APP_API_URL + url, options)
 
         if (!response.ok) {
           throw new Error(response.statusText)

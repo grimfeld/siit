@@ -8,7 +8,7 @@ import eventBus from '../utils/EventBus'
 
 const EmployeesList = ({ className, filter }: { className?: string, filter?: Filter }): JSX.Element => {
 
-  const { pending, data, error } = useFetch<Employee[]>(!filter ? 'http://localhost:3001/users.json' : `http://localhost:3001/users.json?service_id=${filter.id}`, {
+  const { pending, data, error } = useFetch<Employee[]>(!filter ? '/users.json' : `/users.json?service_id=${filter.id}`, {
     method: "GET"
   })
 

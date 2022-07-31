@@ -7,7 +7,7 @@ import Title from './Title'
 
 const ServicesList = ({ className }: { className?: string }): JSX.Element => {
 
-  const { pending, data, error } = useFetch<Service[]>('http://localhost:3001/services.json', {
+  const { pending, data, error } = useFetch<Service[]>('/services.json', {
     method: "GET"
   })
 
